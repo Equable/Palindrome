@@ -19,10 +19,12 @@ int main(){
 
 
     for(int i = T; i > 0; i--){
-        cin.ignore();
+        // May need to create a new subroutine to prevent it from incrementing on failure
         cout << "Enter string " << i << ": ";
         cin >> str;
         stk.push(str);
+        cin.clear();
+        cin.ignore(50, '\n');
 
     };
 
